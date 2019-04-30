@@ -19,6 +19,10 @@
     <ul ><li v-for="todo in todos">{{todo.text}}</li></ul>
     <input v-model="message">
     <button v-on:click="reverseMessage">Reverse Message</button>
+    <ol>
+      <!-- Create an instance of the todo-item component -->
+      <todo-item></todo-item>
+    </ol>
   </div>
   <script src="app.js"></script>
 </body>

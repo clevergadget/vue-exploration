@@ -17,6 +17,7 @@
     <p>{{ message }}</p>
     <p v-if="seen">Seen is true</p>
     <ul ><li v-for="todo in todos">{{todo.text}}</li></ul>
+    <input v-model="message">
     <button v-on:click="reverseMessage">Reverse Message</button>
   </div>
   <script src="app.js"></script>

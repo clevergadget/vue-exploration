@@ -1,6 +1,30 @@
 Vue.component('todo-item', {
   props: ['todo'],
-  template: '<li>{{todo.text}}</li>'
+  template: '<li>{{todo.text}}</li>',
+  beforeCreated: function() {
+    console.log('beforeCreated')
+  },
+  created: function() {
+    console.log('created')
+  },
+  beforeMount: function() {
+    console.log('beforeMount')
+  },
+  mounted: function() {
+    console.log('mounted')
+  },
+  beforeUpdate: function() {
+    console.log('beforeUpdate')
+  },
+  updated: function() {
+    console.log('updated')
+  },
+  beforeDestroy: function() {
+    console.log('beforeDestroy')
+  },
+  destroyed: function() {
+    console.log('destroyed')
+  }
 })
 
 new Vue({
@@ -9,12 +33,10 @@ new Vue({
       message: 'Hello Vue.js!',
       seen: true,
       todos: [
-        { text: 'Learn JavaScript' },
-        { text: 'Learn Vue' },
-        { text: 'Build something awesome' }
+        { text: 'Learn JavaScript' }
       ],
       groceryList: [
-        {id:0, text: "Bread"}, {id:1, text: "Milk"}, {id:2, text:"Chocolate"}
+        {id:0, text: "Bread"}
       ]
     },
     methods: {
